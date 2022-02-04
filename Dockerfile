@@ -12,7 +12,6 @@ RUN make build
 
 FROM scratch
 
-COPY --from=builder /app/queues.yaml .
 COPY --from=builder /app/service .
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 
